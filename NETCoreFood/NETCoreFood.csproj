@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  
+  <!--  
+    If we compare ASP.NET framework web project file to this, we do not 
+    list the files ( indiviually), This is because every .cs file will inside the folder
+    will be considered ( as they reside in the folder) 
+    The project is now based on the file system . In the csproj file we only have info 
+    about the targetframewrok being used and the packages that are being used . We do not 
+    have a files ( like a config) that lists all the files in my project 
+  -->
+  <!--this is to inform that my web application is going to use .NET core 2.1 version 
+  // this can also be net46 ( this is for the .NET framework)--> 
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  
+  <!--// this is the package references that application needs 
+  //this is NuGet package . this package is a dependecy for the app.
+  Microsoft.AspNetCore.App has it own dependencies that it will bring.
+  If we expand the NuGet -> icrosoft.AspNetCore.App -> we will see the list
+  of all the dependencies.
+  --> 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
