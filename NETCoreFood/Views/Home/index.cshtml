@@ -1,0 +1,27 @@
+﻿@model HomeIndexViewModel
+
+@{
+    ViewBag.Title = "Home Page Title";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div>@Model.CurrentMessage</div>
+<table>
+    @foreach (var resturant in Model.Resturants)
+    {
+        <partial name="_Summary" model=" resturant" />
+    }
+
+
+    <div>
+        <a asp-action="Create">Create </a>
+    </div>
+
+
+
+</table>
+
+@section footer{
+    @DateTime.Now;
+}

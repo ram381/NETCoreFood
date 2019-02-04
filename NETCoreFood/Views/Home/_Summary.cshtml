@@ -1,0 +1,12 @@
+﻿
+
+<div>@Model.Id</div>
+
+<div>@Model.Name</div>
+
+<div>@Model.CusineType</div>
+<div>
+    <a href="home/Details/@Model.Id">Details...</a>
+    <a asp-action="Details" asp-route-id="@Model.Id">More Info..</a>
+    <a href="/Resturants/Edit/@Model.Id">Edit HLink</a>
+</div>

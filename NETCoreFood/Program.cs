@@ -59,7 +59,8 @@ namespace NETCoreFood
           
            
             WebHost.CreateDefaultBuilder(args)
-            
+                .UseKestrel()
+            .UseIISIntegration()
                 .UseStartup<Startup>();
     }
 }

@@ -1,0 +1,13 @@
+﻿@*This is for the routing, the URL should have the value passed. If not passsed,
+404 error is thrown.
+@Page  is the first keyword used in the Razor pages. This is a must.   
+*@ 
+@page
+@model NETCoreFood.Pages.GreeterModel
+@{
+    <div>Message using Model @Model.Message </div>
+}
+
+@inject IGreeter Greeter
+
+    <h1>  Message of Day is using Inject: @Greeter.GetMessageOfDay()</h1> 

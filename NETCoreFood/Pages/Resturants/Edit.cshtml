@@ -1,0 +1,24 @@
+﻿@page "{id}"
+@model ResturantsModel
+@using NETCoreFood.Pages.Resturants
+
+
+<h1>Edit @Model.resturant.Name </h1>
+
+<form method="post">
+    <div>
+        <input type="hidden" asp-for="resturant.Id" />
+    </div>
+    <div>
+        <input asp-for="resturant.Name" />
+        <span asp-validation-for="resturant.Name"></span>
+    </div>
+
+    <div>
+        <select asp-for="resturant.CusineType" asp-items="@Html.GetEnumSelectList<CusineType>()"></select>
+        <span asp-validation-for="resturant.CusineType"></span>
+    </div>
+
+    <input type="submit" name="save" value="Save" />
+
+    </form>

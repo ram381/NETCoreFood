@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
-namespace NETCoreFood
+namespace NETCoreFood.Services
 {
     public interface IGreeter
     {

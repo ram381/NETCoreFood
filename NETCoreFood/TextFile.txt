@@ -1,0 +1,3 @@
+﻿1. When using API it is advised to follow the MVC framework or design pattern.
+2. When working with views in the ASP.NET Core it is advised to used the Razor pattern for 
+ASP.NET core. What is meant by using Razor pattern is , we have to use pages.
